@@ -1,0 +1,463 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;1,700&display=swap");
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid green;
+  -webkit-text-fill-color: black;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+          box-shadow: 0 0 0px 1000px white inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+section > p {
+  font-size: 1.2rem;
+}
+
+#sesionNombre {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 0.3rem;
+  background-color: #ffe009;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Overpass', sans-serif;
+}
+
+header {
+  height: 25vh;
+  padding-top: 1rem;
+  text-align: center;
+  color: #fff;
+  background-color: #151515;
+  background-image: url("../assets/images/bg-taller-concept.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header h1 {
+  margin: 4rem 0 0 0;
+  font-size: 3rem;
+}
+
+header h2 {
+  margin-top: 0;
+}
+
+main#indexLogin #tabsDiv {
+  width: 80%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+main#indexLogin #tabsDiv a:hover {
+  color: #151515;
+  background-color: #e9e9e9;
+  font-size: 16px;
+}
+
+main#indexLogin #tabsDiv .linkClass {
+  width: 49%;
+  float: left;
+  cursor: pointer;
+  padding: 10px 15px 10px 10px;
+  border: none;
+  border-bottom: 2px solid #d1d1d1;
+  background: none;
+  color: #d1d1d1;
+  font-weight: bold;
+  font-family: 'Overpass', sans-serif;
+}
+
+main#indexLogin #tabsDiv .linkClass:nth-child(2) {
+  float: right;
+}
+
+main#indexLogin #tabsDiv .active {
+  border-bottom: 2px solid #151515;
+  color: #151515;
+}
+
+main#indexLogin #tabsDiv .contentClass {
+  display: none;
+  padding: 4rem 2rem;
+}
+
+main#indexLogin #tabsDiv .contentClass form {
+  margin: 0 auto;
+  padding-top: 1rem;
+  width: 25rem;
+}
+
+main#indexLogin #tabsDiv .contentClass form p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+}
+
+main#indexLogin #tabsDiv .contentClass form p label {
+  margin-top: 1rem;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+main#indexLogin #tabsDiv .contentClass form p input {
+  height: 2rem;
+  border: none;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+main#indexLogin #tabsDiv .contentClass form p input:focus {
+  outline: none;
+  border-bottom: 1px solid #151515;
+}
+
+main#indexLogin #tabsDiv .contentClass form input[type=submit] {
+  width: 13rem;
+  margin-top: 2rem;
+  padding: 0.7rem 0.5rem;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background-color: #ffe009;
+  color: #151515;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'Overpass', sans-serif;
+  cursor: pointer;
+}
+
+main#indexLogin #tabsDiv .contentClass form input[type=submit]:hover {
+  border-bottom: 2px solid #151515;
+}
+
+main#loginTaller #container {
+  width: 80%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+main#loginTaller #container .rowtable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 2.5rem;
+}
+
+main#loginTaller #container .rowtable:first-of-type {
+  margin: 2rem 0 0.5rem 0;
+  border-bottom: 1px solid #dadada;
+  background-color: #f9f9f9;
+}
+
+main#loginTaller #container .rowtable:not(:first-child):nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+main#loginTaller #container .rowtable:not(:first-child):hover {
+  background-color: #ffe009;
+  /* cursor: pointer; */
+}
+
+main#loginTaller #container .rowtable span {
+  width: 20%;
+}
+
+main#loginTaller #container .rowtable label, main#loginTaller #container .rowtable i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+main#loginTaller #container .rowtable label input, main#loginTaller #container .rowtable i input {
+  display: none;
+}
+
+main#gestion #container {
+  width: 80%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+main#gestion #container a {
+  display: block;
+  width: 3rem;
+  margin: 3rem auto;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #151515;
+}
+
+main#gestion #container a:hover {
+  background-color: #ffe009;
+}
+
+main#gestion #container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5rem;
+}
+
+main#gestion #container .formrow {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main#gestion #container .formrow:nth-of-type(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 3rem;
+}
+
+main#gestion #container .formrow:nth-of-type(2) div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main#gestion #container .formrow label {
+  margin-top: 1rem;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+main#gestion #container .formrow input, main#gestion #container .formrow select {
+  height: 2rem;
+  border: none;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+main#gestion #container .formrow input:focus, main#gestion #container .formrow select:focus {
+  outline: none;
+  border-bottom: 1px solid #151515;
+}
+
+main#gestion #container .formrow select {
+  overflow: hidden;
+  height: 10rem;
+  margin-top: 1rem;
+}
+
+main#gestion #container .formrow select option:not(:first-child) {
+  height: 2em;
+  margin-bottom: 0.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main#gestion #container input[type=submit] {
+  width: 12rem;
+  height: 3rem;
+  margin-top: 2rem;
+  padding: 0.7rem 0.5rem;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background-color: #ffe009;
+  color: #151515;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'Overpass', sans-serif;
+  cursor: pointer;
+}
+
+main#gestion #container input[type=submit]:hover {
+  border-bottom: 2px solid #151515;
+}
+
+main#gestion #container .rowtable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 2.5rem;
+}
+
+main#gestion #container .rowtable:first-of-type {
+  margin: 2rem 0 0.5rem 0;
+  border-bottom: 1px solid #dadada;
+  background-color: #f9f9f9;
+}
+
+main#gestion #container .rowtable:not(:first-child):nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+main#gestion #container .rowtable span {
+  width: 20%;
+}
+
+main#gestion #container .rowtable label, main#gestion #container .rowtable i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+main#gestion #container .rowtable label input, main#gestion #container .rowtable i input {
+  display: none;
+}
+
+main#cita #container {
+  padding-top: 3rem;
+}
+
+main#cita #container .confirmimage {
+  display: block;
+  width: 7rem;
+  margin: 0 auto;
+}
+
+main#cita #container p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+main#cita #container ul {
+  width: 9rem;
+  margin: 0 auto;
+}
+
+main#cita #container ul li {
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+}
+
+main#cita #container ul li::marker {
+  color: #ffe009;
+}
+
+main#cita #container a {
+  width: 16rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #151515;
+}
+
+main#cita #container a:hover {
+  background-color: #ffe009;
+  padding: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  main#indexLogin #tabsDiv {
+    width: 100%;
+  }
+  main#indexLogin #tabsDiv .linkClass {
+    padding: 0;
+  }
+  main#indexLogin #tabsDiv form {
+    width: 100% !important;
+  }
+  main#gestion form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main#gestion form .formrow {
+    width: 100% !important;
+  }
+  main#gestion form .formrow:nth-of-type(2) {
+    margin: 0 !important;
+  }
+  main#gestion form .formrow:nth-of-type(2) div {
+    width: 100% !important;
+  }
+  .rowtable:nth-of-type(1) {
+    padding: 1rem 0;
+  }
+  .rowtable span {
+    width: 33% !important;
+  }
+  main#loginTaller #container {
+    width: 95%;
+    /* & label {
+                              display: contents !important;
+                              width: inherit !important;
+                        } */
+  }
+  main#loginTaller #container .rowtable span {
+    font-size: .7rem;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .linkClass {
+    padding: 0 20px !important;
+  }
+}
+/*# sourceMappingURL=app.css.map */

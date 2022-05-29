@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;1,700&display=swap');
+
+$Black:#151515;
+$Yellow:#ffe009;
+$Gray:#d1d1d1;
+$LightGray: #f9f9f9;
+$MediumGray2 : #dadada;
+
+
+// Autocompletar Quitar estilos Chrome predefinidos
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid green;
+  -webkit-text-fill-color: rgb(0, 0, 0);
+  box-shadow: 0 0 0px 1000px rgb(255, 255, 255) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+// Styles comunes
+h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+}
+section>p {
+      font-size: 1.2rem;
+}
+#sesionNombre {
+      position: absolute;
+      top: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.3rem;
+      background-color: $Yellow;
+}
+
+body {
+      padding: 0;
+      margin: 0;
+      font-family: 'Overpass', sans-serif;
+}
+
+      // header
+      header {
+            height: 25vh;
+            padding-top: 1rem;
+            text-align: center;
+            color: #fff;
+            background-color: $Black;
+            background-image: url('../assets/images/bg-taller-concept.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+            & h1 {
+                  margin: 4rem 0 0 0;
+                  font-size: 3rem;
+            }
+
+            & h2 {
+                  margin-top: 0; 
+            }
+      }
+
+      
+       // Index
+      main#indexLogin  {
+            & #tabsDiv {
+                  width: 80%;
+                  margin: 2rem auto;
+                  text-align: center;
+      
+                  & a {
+                        &:hover {
+                              color: $Black;
+                              background-color: #e9e9e9;
+                              font-size: 16px;
+                        }
+                  }
+      
+                  & .linkClass {
+                        width: 49%;
+                        float: left;
+                        cursor: pointer;
+                        padding: 10px 15px 10px 10px;
+                        border: none;
+                        border-bottom: 2px solid $Gray;
+                        background: none;
+                        color: $Gray;
+                        font-weight: bold;
+                        font-family: 'Overpass', sans-serif;
+                        
+                        &:nth-child(2) {
+                              float: right;
+                        }
+                  }
+      
+                  & .active {
+                        border-bottom: 2px solid $Black;
+                        color: $Black;
+                  }
+      
+                  & .contentClass {
+                        display: none;
+                        padding: 4rem 2rem;
+      
+                        & form {
+                              margin: 0 auto;
+                              padding-top: 1rem;
+                              width: 25rem;
+                              
+      
+                              & p {
+                                    display: flex;
+                                    flex-direction: column;
+                                    text-align: left;
+      
+      
+                                    & label {
+                                          margin-top: 1rem;
+                                          text-align: left;
+                                          font-size: 0.8rem;
+                                          font-weight: bold;
+            
+                                    }
+                                    & input {
+                                          height: 2rem;
+                                          border: none;
+                                          border-bottom: 1px solid $Gray;
+            
+                                          &:focus {
+                                                outline: none;
+                                                border-bottom: 1px solid $Black;
+                                          }
+      
+                                    }
+            
+                              }
+      
+                              & input[type=submit] {
+                                    width: 13rem;
+                                    margin-top: 2rem;
+                                    padding: 0.7rem 0.5rem;
+                                    border: none;
+                                    border-bottom: 2px solid transparent;
+                                    background-color: $Yellow;
+                                    color: $Black;
+                                    font-weight: bold;
+                                    font-size: 1rem;
+                                    font-family: 'Overpass', sans-serif;
+                                    cursor: pointer;
+      
+                                    &:hover {
+                                          border-bottom: 2px solid $Black;
+      
+                                    }
+                              }
+      
+                              
+                        }
+                  }
+            }
+            
+            
+      }
+
+      // loginTaller
+      main#loginTaller {
+            & #container {
+                  width: 80%;
+                  margin: 2rem auto;
+                  text-align: center;
+            
+                  & .rowtable {
+            
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        height: 2.5rem;
+                        
+            
+                        &:first-of-type {
+                              margin: 2rem 0 0.5rem 0;
+                              border-bottom: 1px solid $MediumGray2;
+                              background-color: $LightGray;
+                        }
+            
+                        &:not(:first-child) {
+                              &:nth-of-type(even) {
+                                    background-color: $LightGray;
+                              }
+            
+                              &:hover {
+                              background-color: #ffe009;
+                              /* cursor: pointer; */
+                              }
+                        }
+            
+            
+                        & span {
+                              width: 20%;
+            
+                              
+                        }
+            
+                        & label, i {
+                              display: flex;
+                              justify-content: space-between;
+                              width: 100%;
+            
+                              & input {
+                                    display: none;
+                              }
+            
+                        
+                        }
+            
+                  }
+            }
+      }
+
+
+      // gestion
+      main#gestion {
+            & #container {
+                  width: 80%;
+                  margin: 2rem auto;
+                  text-align: center;
+
+                  //
+                  & a {
+                        display: block;
+                        width: 3rem;
+                        margin: 3rem auto;
+                        text-align: center;
+                        font-size: 1.1rem;
+                        color: $Black;
+
+                        &:hover {
+                              background-color: $Yellow;
+                              
+                        }
+                  }
+            
+                  & form {
+                        display: flex;
+                        justify-content: center;
+                        margin-bottom: 5rem;
+                  }
+                  
+                  & .formrow {
+                        width: 30%;
+                        display: flex;
+                        flex-direction: column;
+                        &:nth-of-type(2) {
+                              display: flex;
+                              justify-content: flex-end;
+                              align-items: center;
+                              margin-left: 3rem;
+
+                              & div {
+                                    display: flex;
+                                    flex-direction: column;
+                              }
+                        }
+                        
+                        & label {
+                              margin-top: 1rem;
+                              text-align: left;
+                              font-size: 0.8rem;
+                              font-weight: bold;
+
+                        }
+
+                        & input, select {
+
+                              height: 2rem;
+                              border: none;
+                              border-bottom: 1px solid $Gray;
+
+                        
+
+                              &:focus {
+                                    outline: none;
+                                    border-bottom: 1px solid $Black;
+                              }
+                        }
+
+                        & select {
+
+                              overflow: hidden;
+                              height: 10rem;
+                              margin-top: 1rem;
+
+                              & option:not(:first-child) {
+                                    height: 2em;
+                                    margin-bottom: 0.3rem;
+                                    display: flex;
+                                    align-items: center;
+                              }
+                        }
+
+                        
+
+                        
+                        
+
+
+                        
+                  }
+
+                  & input[type=submit] {
+                        width: 12rem;
+                        height: 3rem;
+                        margin-top: 2rem;
+                        padding: 0.7rem 0.5rem;
+                        border: none;
+                        border-bottom: 2px solid transparent;
+                        background-color: $Yellow;
+                        color: $Black;
+                        font-weight: bold;
+                        font-size: 1rem;
+                        font-family: 'Overpass', sans-serif;
+                        cursor: pointer;
+
+                        &:hover {
+                              border-bottom: 2px solid $Black;
+
+                        }
+                  }
+
+
+                  & .rowtable {
+            
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        height: 2.5rem;
+                        
+            
+                        &:first-of-type {
+                              margin: 2rem 0 0.5rem 0;
+                              border-bottom: 1px solid $MediumGray2;
+                              background-color: $LightGray;
+                        }
+            
+                        &:not(:first-child) {
+                              &:nth-of-type(even) {
+                                    background-color: $LightGray;
+                              }
+                        }
+            
+            
+                        & span {
+                              width: 20%;
+ 
+                        }
+            
+                        & label, i {
+                              display: flex;
+                              justify-content: space-between;
+                              width: 100%;
+            
+                              & input {
+                                    display: none;
+                              }
+
+                        }
+                  }
+                  
+      }
+      }
+
+      // cita
+      main#cita {
+            & #container {
+                  padding-top: 3rem;
+
+                  & .confirmimage {
+                        display: block;
+                        width: 7rem;
+                        margin: 0 auto;
+                  }
+                  & p {
+                        text-align: center;
+                        font-size: 1.5rem;
+                  }
+
+                  & ul {
+                        width: 9rem;
+                        margin: 0 auto;
+                        
+
+                        & li {
+                              font-size: 1.2rem;
+                              line-height: 2.5rem;
+
+                              &::marker { 
+                                    color: $Yellow;
+                                  }
+                        }
+                  }
+
+                  & a {
+                        width: 16rem;
+                        margin-top: 2rem;
+                        text-align: center;
+                        font-size: 1.1rem;
+                        color: $Black;
+
+                        &:hover {
+                              background-color: $Yellow;
+                              padding: 0.5rem;
+                        }
+                  }
+            }
+      }
+
+      // responsive
+      @media only screen and (max-width: 600px) {
+            header h1 {
+                  font-size: 2.5rem;
+            }
+
+            main#indexLogin  {
+                  & #tabsDiv {
+                        width: 100%;
+                        
+                        & .linkClass {
+                              padding: 0;
+                        }
+
+                        & form {
+                              
+                              width: 100% !important;
+                  }
+
+            }
+            }
+
+            main#gestion {
+                  form {
+                        flex-direction: column;
+                        align-items: center;
+                        
+                        & .formrow {
+                              width: 100% !important;
+                        }
+
+                        & .formrow:nth-of-type(2) {
+                              margin: 0 !important;
+
+                              & div {
+                                    width: 100% !important; 
+                              }
+                        }
+                  }
+            }
+
+            .rowtable:nth-of-type(1) {
+                  padding: 1rem 0;
+            }
+            .rowtable span {
+                  width: 33% !important;
+            }
+
+            main#loginTaller {
+                  & #container {
+                        width: 95%;
+
+                        /* & label {
+                              display: contents !important;
+                              width: inherit !important;
+                        } */
+                        & .rowtable {
+
+                        
+                              & span {
+                                    font-size: .7rem;
+                                    
+                              }
+                        }
+                        
+                  }
+            }
+
+            
+      }
+
+
+      @media only screen and (max-width: 410px) {
+            .linkClass {
+                  padding: 0 20px !important;
+            }
+      }
