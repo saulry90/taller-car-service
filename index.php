@@ -6,16 +6,16 @@
                   <div id="tabsDiv">
 
                         <button class="linkClass" onclick="displayContent(event, 'privada')">
-                        Inicio de sesión como empleado
+                        Inicia sesión como empleado
                         </button>
 
                         <button class="linkClass" onclick="displayContent(event, 'clientes')">
-                        Inicio de sesión como cliente
+                        Inicia sesión como cliente
                         </button>
             
                         <!-- Pestaña login privado  -->
                         <div id="privada" class="contentClass">
-                              <h3>Inicio de sesión como empleado</h3>
+                              <h3>Inicia sesión como empleado</h3>
                                     <section>
                                           <p>Introduce tu nombre de usuario y la contraseña para acceder a tu area privada:</p>
                                           <form action="loginTaller.php" method="post">
@@ -28,7 +28,7 @@
             
                         <!-- Pestaña login cliente  -->
                         <div id="clientes" class="contentClass">
-                              <h3>Inicio de sesión como cliente</h3>
+                              <h3>Inicia sesión como cliente</h3>
                               <section>
                                     <p>Introduce tu e-mail y la contraseña para acceder a tus citas:</p>
                                     <form action="loginClient.php" method="post">
