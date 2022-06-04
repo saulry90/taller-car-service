@@ -50,23 +50,24 @@ else
                       
 
                         // Consultar el codigo del cliente comparando con el nombre del cliente que tenemos almacenado en la sesión
-                        $sql="SELECT codigo FROM client WHERE nombre = '$nameclient'";
+                        $sql="SELECT codigo,mail FROM client WHERE nombre = '$nameclient'";
                         $result= $conn->query($sql);
                         // Si hay un resultado en la BBDD
                         if ($result->num_rows==1) 
                         {
                             while($row=$result->fetch_assoc()) {
                                 $codigo = $row['codigo'];
+                                $mail = $row['mail'];
                             }
 
                             // Por cada tipo de servicio insertar en la tabla solicitar una cita nueva
                             for ($i=0;$i<count($nombreserv);$i++)    
                             {     
-                            $sql2="INSERT INTO solicitar (tipo,codigo,fecha,user) VALUES ('$nombreserv[$i]','$codigo','$datecita','$nomworker')";
+                            $sql2=utf8_decode("INSERT INTO solicitar (tipo,codigo,fecha,user) VALUES ('$nombreserv[$i]','$codigo','$datecita','$nomworker')");
                             if ($conn->query($sql2)===TRUE)
                             {
                                 $servis = $nombreserv[$i];
-                                echo utf8_encode("<li>".$nombreserv[$i]."</li>"); 
+                                echo ("<li>".$nombreserv[$i]."</li>"); 
                             }
                             else 
                             {
@@ -76,7 +77,7 @@ else
                             // * Para enviar el mail con mailto y meter en variable los servicios de <li>. Volver a listado con historico javascript
                             echo "
                             </ul>
-                            <p><a href='mailto:saulry90@gmail.com?subject=Su%20próxima%20visita%20al%20taller&body=Hola%20".$nameclient."%20le%20recordamos%20que%20su%20próxima%20visita%20al%20taller%20es%20el%20".$datecita."%20para%20una%20revisión%20de:%0A%0A";
+                            <p><a href='mailto:".$mail."?subject=Su%20próxima%20visita%20al%20taller&body=Hola%20".$nameclient."%20le%20recordamos%20que%20su%20próxima%20visita%20al%20taller%20es%20el%20".$datecita."%20para%20una%20revisión%20de:%0A%0A";
                             for ($i=0;$i<count($nombreserv);$i++) {    
 
                                 echo "· ".$nombreserv[$i]."%0A";
