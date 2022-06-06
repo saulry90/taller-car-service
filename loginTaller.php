@@ -1,10 +1,7 @@
-<?php include 'modulo_header.php';?>
-<?php
+<?php 
+include 'modulo_header.php';
 session_start();
-?>
 
-    
-<?php
 // Datos form
 $aceptar=$_POST["aceptar"];
 $user=htmlspecialchars($_POST["user"]);
@@ -24,6 +21,9 @@ if ($conn->connect_error)
 }
 else
 { 
+    /* if (isset($_SESSION['user']) {
+        echo "ddd";
+    } */
     if (isset($_POST["aceptar"]))
     {
          if (!empty($user) && !empty($passwordForm)) 
@@ -36,8 +36,8 @@ else
             if ($result->num_rows==1) 
             {
 
-                
 
+              
                 // Crear sesión con el user del mecánico que a accedido
                 $_SESSION["user"]=$user;
                 $_SESSION["passw"]=$passwordForm;

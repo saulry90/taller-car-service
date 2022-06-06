@@ -37,8 +37,22 @@ else
                     <div id="container">
 
                             <h3>Crear nueva cita para revisión</h3>
-                            
-                            <p>Crea una nueva cita para <?php echo $_SESSION["nombre"]; ?> indicando los servicios que debe realizar en su próxima visita.</p>
+
+                            <?php
+                        // Seleccionar de la tabla de clientes el nombre del cliente que coincida con el seleccionado en el form anterior
+                        $sqlcl="SELECT nombre FROM client WHERE codigo = '$clienteSel'";
+                        $resultcl= $conn->query($sqlcl);
+                        if ($resultcl->num_rows>0)
+                        {
+                            while($row=$resultcl->fetch_assoc()) {
+                                $nombrecl = $row['nombre'];
+                            }
+                        }
+
+                        $_SESSION["nombre"] = $nombrecl;
+                        ?>
+
+                            <p>Crea una nueva cita para <?php echo $nombrecl; ?> indicando los servicios que debe realizar en su próxima visita.</p>
 
                         <form action="cita.php" method="post">
 
@@ -82,20 +96,7 @@ else
 
 
                         
-                        <?php
-                        // Seleccionar de la tabla de clientes el nombre del cliente que coincida con el seleccionado en el form anterior
-                        $sqlc="SELECT nombre FROM client WHERE codigo = '$clienteSel'";
-                        $resultc= $conn->query($sqlc);
-                        if ($resultc->num_rows>0)
-                        {
-                            while($row=$resultc->fetch_assoc()) {
-                                $nombre = $row['nombre'];
-                            }
-                        }
-                        ?>
-
-                        
-                        <h3>Registro de solicitudes de <?php echo $nombre; ?></h3>
+                        <h3>Registro de solicitudes de <?php echo $nombrecl; ?></h3>
                     
                         <div class="rowtable">
                             <span>Tipo de servicio </span>
